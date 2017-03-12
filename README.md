@@ -1,0 +1,1 @@
+# ZSH Search History
