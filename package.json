@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nullren/zsh-history.git"
+    "url": "git+https://github.com/nullren/zsh-search-history.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nullren/zsh-history/issues"
+    "url": "https://github.com/nullren/zsh-search-history/issues"
   },
-  "homepage": "https://github.com/nullren/zsh-history#readme"
+  "homepage": "https://github.com/nullren/zsh-search-history#readme"
 }
