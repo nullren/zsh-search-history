@@ -36,7 +36,6 @@ function createApiKey(email, awsCb) {
             const api_key_id = data.id;
             const api_key = data.value;
             const email = data.name;
-            // associate key to usage plan
             attachUsagePlan(api_key_id, api_key, email, awsCb);
         }
     });
@@ -76,15 +75,11 @@ function sendEmail(email, api_key, awsCb) {
         },
         Source: "zsh-history@omgren.com"
     };
-    ses.sendEmail(emailParams, sesEmailCb(email, awsCb));
-}
-
-function sesEmailCb(email, awsCb) {
-    return (err, data) => {
+    ses.sendEmail(emailParams, (err, data) => {
         if (err) fail("Failed to send email", err, awsCb);
         else {
             console.log("Sent email", data);
             successfulResponse(email, awsCb);
         }
-    };
+    });
 }
